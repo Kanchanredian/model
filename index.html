@@ -1,0 +1,632 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Us</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+   integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+   
+</head>
+<body>
+
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary model-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="background-color:#359d9e; border-radius: 50px;">
+  Pick Your Plan
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <p class="modal-title" id="exampleModalLabel">Modal title</p> -->  <h4>Tax Information</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Would you like to sign up for the Drive hub  accounting packages</p>
+         </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-no">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrops">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+<!-- Tax Information Yes button click -->
+  <div class="modal fade" id="staticBackdrops" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Do you have UTR (Unique Tax Reference) </p>
+         
+
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#utr-no">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#utr-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+<!-- Tax Information No button click -->
+  <div class="modal fade" id="staticBackdrop-no" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>You will not benefit from any of our services including perk box</p>
+          <p>Are you Sure?</p>
+         
+
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrops">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#Basic-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+<!--  UTR Yes button click -->
+  <div class="modal fade" id="utr-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>UTR (Unique tax reference) </p>
+          <input type="number" class="form-control ">
+          <p class="mt-2">Business/Billing address</p>
+          <input type="number" class="form-control ">
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#utr-no">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+  
+  <!-- UTR No button click -->
+
+  <div class="modal fade" id="utr-no" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Do you hava a VAT number?</p>
+         
+
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#vat-no">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- basic yes button click -->
+  <div class="modal fade" id="Basic-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Out put</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Stay with Basic plan</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#stay-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+<!-- Stay yes button click -->
+  <div class="modal fade" id="stay-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Out put</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Stay on Basic plan</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+<!-- vat yes button -->
+  <div class="modal fade" id="vat-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h4>Tax information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Provide VAT Number</p>
+          <input type="number" class="form-control ">
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-provide-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+<!-- VAt No button -->
+
+
+<div class="modal fade" id="vat-no" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>To qualify for VAT boost you must register for VAT Number </p>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-boost-yes">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+<!--provide VAT number yes button -->
+
+  <div class="modal fade" id="vat-provide-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h4>Tax information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Which vat scheme are you part of:  </p>
+          <p>Satandard or flat rate?  </p>
+          <p>Click to understand the difference</p>
+         
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#S-Workflow">STANDARD</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#F-Workflow">FLAT</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+<!-- starndard flow -->
+  <div class="modal fade" id="S-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h4>Tax Information</h4>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+      
+          <p>Standard Workflow </p>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#SY-Workflow">Yes</button>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
+<!-- Flat flow -->
+<div class="modal fade" id="F-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>Flat Rate Workflow </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#FY-Workflow">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<!-- Standard workflow yes -->
+<div class="modal fade" id="SY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>Drivehub ony works with flat rate scheme </p>
+        <p>Would you like to switch to flat rate VAT Scheme? </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#SN-Workflow">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#F-Workflow">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- Standard workflow NO -->
+<div class="modal fade" id="SN-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>Standard rate is not compatible with our packages  </p>
+        <p> Yo will stay on our basic plan, but will be contacted by our sales team for more info</p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#stay-yes">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Flat workflow yes -->
+<div class="modal fade" id="FY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>UTR-Y </p>
+
+        <p>VAT Registered-Y </p>
+        <p>Enter : UTR VAT Number </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<!-- VAt boost yu register yes button  -->
+
+
+<div class="modal fade" id="vat-boost-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>Would you like to register for flat rate VAT?</p>
+        <p>clik here to learn about VAT Scheems</p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#vat-flat-No">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-flat-yes">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- Register for flat vAT yes button -->
+<div class="modal fade" id="vat-flat-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p> Sign VAT  registration form for flat rate boost</p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#Sign-No">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#Sign-yes">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!--  Register for flat vAT No button -->
+<div class="modal fade" id="vat-flat-No" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>Warning: you will not qualify for VAT boost and will be opted out</p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#Not qualify-No">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#Not qualify-yes">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- sign flat rate registration yes button -->
+<div class="modal fade" id="Sign-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+        <p>UTR-Y </p>
+
+        <p>VAT Registered-N </p>
+        <p>Want Vat Registrated?-Y</p>
+        <p>Enter : UTR VAT Number </p>
+        <input type="number" class="form-control" placeholder="Enter UTR number">
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+<!-- sign flat rate registration No button -->
+<div class="modal fade" id="Sign-No" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+      
+          <p>UTR-N </p>
+
+          <p>VAT Registered-N </p>
+          <p>Want Vat Registrated?-Y</p>
+          <p>Enter : Nothing </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- not qualify yes button -->
+
+<div class="modal fade" id="Not qualify-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+      
+          <p>UTR-Y </p>
+
+          <p>VAT Registered-N </p>
+          <p>Want Vat Registrated?-N</p>
+          <p>Enter : UTR </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- not Qualify no button -->
+
+<div class="modal fade" id="Not qualify-No" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4>Tax Information</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+    
+      
+          <p>UTR-N </p>
+
+          <p>VAT Registered-N </p>
+          <p>Enter : Nothing </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+crossorigin="anonymous"></script>
+<script src="./assets/js/slick.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-messaging.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  
+</body>
+</html>
+
