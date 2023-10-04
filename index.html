@@ -109,21 +109,21 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4>Tax Information</h4>
+          <h4>Tax Summary</h4>
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
         </div>
         <div class="modal-body">
           <div class="container">
       
           <p>UTR (Unique tax reference) </p>
-          <input type="number" class="form-control ">
+          <input type="number" class="form-control " required>
           <p class="mt-2">Business/Billing address</p>
-          <input type="number" class="form-control ">
-        </div>
+          <input type="number" class="form-control " required>
+        </div>  
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#utr-no">Yes</button>
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">back</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#utr-no">Continue</button>
           </div>
        
       </div>
@@ -136,7 +136,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4>Tax Information</h4>
+          <h4>Tax Summary</h4>
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
         </div>
         <div class="modal-body">
@@ -157,7 +157,7 @@
   </div>
 
   <!-- basic yes button click -->
-  <div class="modal fade" id="Basic-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="Basic-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -177,7 +177,7 @@
        
       </div>
     </div>
-  </div>
+  </div> -->
 <!-- Stay yes button click -->
   <div class="modal fade" id="stay-yes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -205,19 +205,19 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-         <h4>Tax information</h4>
+         <h4>Tax Summary</h4>
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
         </div>
         <div class="modal-body">
           <div class="container">
       
-          <p>Provide VAT Number</p>
-          <input type="number" class="form-control ">
+          <p>VAT Number</p>
+          <input type="number" class="form-control  " required>
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-provide-yes">Yes</button>
+            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">Back</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-provide-yes">Continue</button>
           </div>
        
       </div>
@@ -269,7 +269,7 @@
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#S-Workflow">STANDARD</button>
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#SY-Workflow">STANDARD</button>
             <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#F-Workflow">FLAT</button>
           </div>
        
@@ -278,7 +278,7 @@
   </div>
 
 <!-- starndard flow -->
-  <div class="modal fade" id="S-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="S-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -298,10 +298,10 @@
        
       </div>
     </div>
-  </div>
+  </div> -->
 
 <!-- Flat flow -->
-<div class="modal fade" id="F-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="F-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -321,7 +321,7 @@
      
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!-- Standard workflow yes -->
@@ -337,6 +337,7 @@
     
         <p>Drivehub ony works with flat rate scheme </p>
         <p>Would you like to switch to flat rate VAT Scheme? </p>
+        <p>To qualify for VAT boost you must register for VAT Number </p>
       </div>
       </div>
       <div class="modal-footer">
@@ -375,7 +376,7 @@
 
 
 <!-- Flat workflow yes -->
-<div class="modal fade" id="FY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="FY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -398,7 +399,7 @@
      
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -416,7 +417,7 @@
         <div class="container">
     
         <p>Would you like to register for flat rate VAT?</p>
-        <p>clik here to learn about VAT Scheems</p>
+        <p>clik here to learn about VAT Scheme</p>
       </div>
       </div>
       <div class="modal-footer">
@@ -479,7 +480,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h4>Tax Information</h4>
+       <h4>Tax Summary</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
@@ -488,9 +489,9 @@
         <p>UTR-Y </p>
 
         <p>VAT Registered-N </p>
-        <p>Want Vat Registrated?-Y</p>
+        <p>Want Vat Registrated-Y</p>
         <p>Enter : UTR VAT Number </p>
-        <input type="number" class="form-control" placeholder="Enter UTR number">
+        <input type="number" class="form-control" placeholder="Enter UTR number" required>
       </div>
       </div>
       <div class="modal-footer">
@@ -506,7 +507,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h4>Tax Information</h4>
+       <h4>Tax Summary</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
@@ -535,7 +536,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h4>Tax Information</h4>
+       <h4>Tax Summary</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
@@ -564,7 +565,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h4>Tax Information</h4>
+       <h4>Tax Summary</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
