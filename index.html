@@ -95,7 +95,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrops">No</button>
-            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#Basic-yes">Yes</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#stay-yes">Yes</button>
           </div>
        
       </div>
@@ -122,7 +122,7 @@
         </div>  
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">back</button>
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrops">Back</button>
             <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#utr-no">Continue</button>
           </div>
        
@@ -216,7 +216,7 @@
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-no btn-secondary" data-bs-dismiss="modal">Back</button>
+            <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#utr-no">Back</button>
             <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#vat-provide-yes">Continue</button>
           </div>
        
@@ -270,7 +270,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-no btn-secondary" data-bs-toggle="modal" data-bs-target="#SY-Workflow">STANDARD</button>
-            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#F-Workflow">FLAT</button>
+            <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#FY-Workflow">FLAT</button>
           </div>
        
       </div>
@@ -376,30 +376,33 @@
 
 
 <!-- Flat workflow yes -->
-<!-- <div class="modal fade" id="FY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="FY-Workflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h4>Tax Information</h4>
+       <h4>Tax Summary</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
         <div class="container">
     
-        <p>UTR-Y </p>
+        <p>UTR-0001</p>
 
-        <p>VAT Registered-Y </p>
-        <p>Enter : UTR VAT Number </p>
+        <p>VAT Registered-0001 </p>
+        <!-- <p>Enter : UTR Number </p>
+        <input type="number" class="form-control" placeholder="Enter UTR number" required>
+        <p class="mt-2">Enter : VAT Number </p>
+        <input type="number" class="form-control" placeholder="Enter VAT number" required> -->
       </div>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">Confirm</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Over</button>
         </div>
      
     </div>
   </div>
-</div> -->
+</div>
 
 
 
@@ -486,17 +489,16 @@
       <div class="modal-body">
         <div class="container">
     
-        <p>UTR-Y </p>
+        <p>UTR-0002 </p>
 
-        <p>VAT Registered-N </p>
-        <p>Want Vat Registrated-Y</p>
-        <p>Enter : UTR VAT Number </p>
-        <input type="number" class="form-control" placeholder="Enter UTR number" required>
+        <p>VAT Registered-0002 </p>
+        <p>Want Vat Registrated-0002</p>
+        
       </div>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
+          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">Confirm</button>
+          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Over</button>
         </div>
      
     </div>
@@ -514,17 +516,17 @@
         <div class="container">
     
       
-          <p>UTR-N </p>
+          <p>UTR-0003 </p>
 
-          <p>VAT Registered-N </p>
-          <p>Want Vat Registrated?-Y</p>
-          <p>Enter : Nothing </p>
+          <p>VAT Registered-0003 </p>
+          <p>Want Vat Registrated?-0003</p>
+          
       </div>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
-        </div>
+        <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">Confirm</button>
+        <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Over</button>
+      </div>
      
     </div>
   </div>
@@ -543,17 +545,17 @@
         <div class="container">
     
       
-          <p>UTR-Y </p>
+          <p>UTR-0004 </p>
 
-          <p>VAT Registered-N </p>
-          <p>Want Vat Registrated?-N</p>
-          <p>Enter : UTR </p>
+          <p>VAT Registered-0004 </p>
+          <p>Want Vat Registrated?-0004</p>
+         
       </div>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
-        </div>
+        <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">Confirm</button>
+        <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Over</button>
+      </div>
      
     </div>
   </div>
@@ -572,16 +574,16 @@
         <div class="container">
     
       
-          <p>UTR-N </p>
+          <p>UTR-0005 </p>
 
-          <p>VAT Registered-N </p>
-          <p>Enter : Nothing </p>
+          <p>VAT Registered-0005 </p>
+         
       </div>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="">Yes</button>
-        </div>
+        <button type="button" class="btn  btn-no btn-secondary" data-bs-dismiss="modal">Confirm</button>
+        <button type="button" class="btn btn-yes btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Start Over</button>
+      </div>
      
     </div>
   </div>
